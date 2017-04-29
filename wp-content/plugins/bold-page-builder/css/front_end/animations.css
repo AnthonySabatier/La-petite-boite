@@ -1,0 +1,42 @@
+.animate {
+	transition: transform 1000ms ease-out-expo, opacity 1000ms ease-out-expo;
+}
+
+@for i in range(1, 20) {
+	.animate:nth-child(#(i)) { transition-delay: math(#(i)*200)ms; }
+}
+
+/* Fade In */
+.bt_bb_animation_fade_in {
+	opacity: 0;
+	&.animated {
+		opacity: 1;
+	}
+}
+
+/* Move, Move & Fade */
+.bt_bb_column[class*="move_down"] {
+	transform: translate3d(0,-30%,0);
+
+}
+
+.bt_bb_column[class*="move_up"] {
+	transform: translate3d(0,30%,0);
+}
+
+.bt_bb_column[class*="move_left"] {
+	transform: translate3d(30%,0,0);
+}
+
+.bt_bb_column[class*="move_right"] {
+	transform: translate3d(-30%,0,0);
+}
+
+.bt_bb_column[class*="move_up"], .bt_bb_column[class*="move_down"],
+.bt_bb_column[class*="move_right"], .bt_bb_column[class*="move_left"] {
+	&.animated {
+		transform: translate3d(0,0,0);
+	}
+}
+
+

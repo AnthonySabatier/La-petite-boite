@@ -1,0 +1,133 @@
+
+/* POST GRID */
+
+.bt_bb_masonry_post_grid_content {
+	transition: opacity 2s;
+}
+
+.bt_bb_grid_container:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.bt_bb_grid_hide {
+	opacity: 0;
+	transition: opacity 0s;
+}
+
+.bt_bb_grid_container {
+	&.bt_bb_columns_1 {
+		.bt_bb_grid_sizer, .bt_bb_grid_item {
+		  width: 100%;
+		}
+	}
+	&.bt_bb_columns_2 {
+		.bt_bb_grid_sizer, .bt_bb_grid_item {
+		  width: 50%;
+		}	
+	}
+	&.bt_bb_columns_3 {
+	  .bt_bb_grid_sizer, .bt_bb_grid_item {
+		width: 33.333%;
+	  }
+	}
+	&.bt_bb_columns_4 {
+	  .bt_bb_grid_sizer, .bt_bb_grid_item {
+		width: 25%;
+	  }
+	}
+	&.bt_bb_columns_5 {
+		.bt_bb_grid_sizer, .bt_bb_grid_item {
+			width: 20%;
+		}
+	}
+	&.bt_bb_columns_6 {
+		.bt_bb_grid_sizer, .bt_bb_grid_item {
+			width: 16.666%;	
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	:any(.bt_bb_grid_container.bt_bb_columns_1, .bt_bb_grid_container.bt_bb_columns_2, .bt_bb_grid_container.bt_bb_columns_3, .bt_bb_grid_container.bt_bb_columns_4,	.bt_bb_grid_container.bt_bb_columns_5, .bt_bb_grid_container.bt_bb_columns_6) {
+		:any(.bt_bb_grid_sizer, .bt_bb_grid_item) {
+			width: 100%;	
+		}
+	}	  
+}
+
+.bt_bb_masonry_post_grid .bt_bb_grid_item_post_content {
+	background: rgba(0,0,0,0.05);
+	padding: 1.5em 2em;
+	text-align: center;
+	.bt_bb_grid_item_date {
+		font-size: 0.875rem;
+		margin-bottom: 0.5em;
+	}
+	.bt_bb_grid_item_post_title {
+		font-size: 1.4em;
+		line-height: 1.3;
+		margin: 0;
+		a {
+			text-decoration: none;
+			box-shadow: none;
+		}
+	}
+	.bt_bb_grid_item_post_title + .bt_bb_grid_item_post_excerpt:not(:empty) {margin-top: 1em;}
+}
+
+.bt_bb_gap_small .bt_bb_grid_item {
+	padding: .2em;
+}
+
+.bt_bb_gap_normal .bt_bb_grid_item {
+	padding: .5em;
+}
+
+.bt_bb_gap_large .bt_bb_grid_item {
+	padding: 1em;
+}
+
+.bt_bb_grid_item {
+	float: left;
+}
+
+.bt_bb_grid_item > img {
+	cursor: pointer;
+}
+
+.bt_bb_post_grid_filter {
+	text-align: center;
+	padding: 1em 2em;
+	.bt_bb_post_grid_filter_item {
+		display: inline-block;
+		padding: 0 1em;
+		margin: 0 1px;
+		cursor: pointer;
+		&:hover, &.active {
+			background: rgba(0,0,0,0.05);
+		}
+	}
+}
+
+
+.bt_bb_post_grid_loader {
+	margin: auto;
+	border: .4em solid #f3f3f3;
+	border-top: .4em solid #3498db;
+	border-radius: 50%;
+	width: 4em;
+	height: 4em;
+	animation: spin 2s linear infinite;
+	display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.bt_bb_grid_item_post_thumbnail img {
+	width: 100%;
+}

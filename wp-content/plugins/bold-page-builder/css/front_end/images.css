@@ -1,0 +1,46 @@
+.bt_bb_image {
+	display: block;
+	overflow: hidden;
+	a, span {
+		display: inline-block;
+		line-height: 0;
+	}
+	img {
+		display: block;
+		margin: 0;
+		line-height: 0;
+		max-width: 100%;
+		height: auto;
+	}
+	&.bt_bb_shape_square {
+		border-radius: 0;
+		img {border-radius: 0;}
+	}
+	&.bt_bb_shape_hard-rounded {
+		border-radius: 50%;
+		img {border-radius: 50%;}
+	}
+	&.bt_bb_shape_soft-rounded {
+		border-radius: 5px;
+		img {border-radius: 5px;}
+	}
+	/* Aligment */
+	:leftAlignSelector {
+		float: left;
+	}
+	:leftAlignSelector + .bt_bb_image {
+		margin-left: 1em;
+	}
+	:rightAlignSelector {
+		float: right;
+	}
+	:rightAlignSelector + .bt_bb_image {
+		margin-right: 1em;
+	}
+	:centerAlignSelector {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+}

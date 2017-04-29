@@ -1,0 +1,11 @@
+
+.bt_bb_text {
+	p:last-child {
+		margin-botton: 0;
+		padding-bottom: 0;
+	}
+	p:last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
